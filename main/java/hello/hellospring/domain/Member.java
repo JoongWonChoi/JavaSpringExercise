@@ -8,16 +8,14 @@ public class Member {
     public Long getId(){
         return id;
     }
-    public Long setId(Long id){
+    public void setId(Long id){
         this.id = id;
-        return id;
     }
     public String getName(){
         return name;
     }
-    public String setname(String name){
+    public void setName(String name){
         this.name = name;
-        return name;
     }
 
 }
