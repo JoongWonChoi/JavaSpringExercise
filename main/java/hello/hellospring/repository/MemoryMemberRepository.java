@@ -20,7 +20,10 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Optional<Member> findById(Long id) {
-        return Optional.ofNullable(store.get(id));
+        return Optional.ofNullable(store.get(id)); //id로 찾는 Name은 String이므로 반환형으로 String 사용하면 안되나?
+        // 내 생각 ===> Member클래스의 Id와 Name은 private이기에 Getter-setter 메서드를 통하여 접근해야함.
+        //        ===> 현재 메서드에서는 Name 자체를 반환하는 것이 아니라 getId라는 Member클래스(자료형)의 '메서드'를 반환하는 것
+        //        ===> 따라서 반환형이 String이 아닌 Member여야 하고, 그래야 Member자료형의 메서드가 반환 가능해지는 것.??
     }
 
     @Override

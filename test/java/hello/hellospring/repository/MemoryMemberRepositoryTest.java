@@ -21,7 +21,7 @@ class MemoryMemberRepositoryTest {
     public void afterEach(){
         repo.clearStore();
     }
-    
+
     @Test
     public void save(){ //저장 test
         Member member = new Member(); //Member클래스에 접근하기위한 member객체 선언
