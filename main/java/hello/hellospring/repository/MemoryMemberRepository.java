@@ -10,9 +10,6 @@ public class MemoryMemberRepository implements MemberRepository {
 
     public static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L; //key값 생성
-
-
-
     @Override
     public Member save(Member member) { //Member 클래스의 객체가 (임의의 'member')가 파라미터로 전달. Member 자료형을 반환하는 클래스
         member.setId(++sequence); //넘어온 member객체의 아이디를 설정(++)
